@@ -4,7 +4,11 @@
 
 ![barter-poster](https://i.imgur.com/SFdewwH.png)
 
-## Milestone 3
+[TOC]
+
+
+
+## **Milestone 3**
 
 ![Poster](https://i.imgur.com/UD2H1Ey.jpg)
 
@@ -45,7 +49,7 @@ In Milestone 3, we have added the features that we set out to do and implemented
    1. Players form parties before fighting multiplayer battles. This helps to promote collaboration and healthy peer support.
    2. This is acheived through polling the backend for updates and using Redis as a key-value store for faster read and writes (about 10x faster than PostgreSQL)
 
-### Prototype
+## **Prototype**
 
 [Link To Prototype](https://josiahkhoo.github.io/barter-web/)
 
@@ -53,7 +57,7 @@ Please run the prototype in a browser that supports WebGL. As Character Creation
 
 ![optimal-chrome](https://i.imgur.com/sExoH2K.png)
 
-
+**Beta Accounts Information**
 
 ```
 username: beta1
@@ -74,13 +78,13 @@ chara2: Beta3_two
 
 
 
-### Architecture and Technologies
+## **Architecture and Technologies**
 
 [Link to barter-unity repo](https://github.com/josiahkhoo/barter-unity)
 
 [Link to barter-django repo](https://github.com/josiahkhoo/barter-django)
 
-**Architecture**
+### Architecture
 
 ![app_architecture](https://i.imgur.com/7Xg8ViT.png)
 
@@ -96,7 +100,7 @@ Barter is built using several technologies:
    1. We used Digital Ocean because we were able to deploy a PaaS as a docker image on a container hosted in Singapore for an affordable cost ($5/month), allowing faster network transactions. We hosted our backend and redis on this docker image.
    2. We used AWS RDS to hold our database for now because it was free :'-) and it helped to manage our database for us, saving maintanence time.
 
-**Backend Services**
+### Backend Services
 
 ![backend_image](https://i.imgur.com/QVDElVT.png)
 
@@ -122,70 +126,75 @@ Our backend is futher broken down into multiple services, which is routed during
 7. **Inventory Service**
    1. Allows for creation of inventory from battle objects (each item generated is tagged a battle, something like an entity tag)
 
-**Database Schema**
+### Database Schema
 
 ![class_diagram](https://i.ibb.co/wMz3SKw/barter-class-diagram-1.png)
 
-### Tests
+## **Tests**
 
-- **Integration Tests**
-  - Integration Tests - User
-    - Able to login with username and password
-    - Able to create an account with username, password and email
-    - Able to stop users from creating accounts with a username or email that is already in used
-    - Able to stop users from creatings accounts with weak passwords (done on client side)
-  - Integration Tests - Character
-    - Shows all characters under the user
-    - Able to create character with a randomly chosen apperance (Not working for WebGL)
-    - Able to equip items that are owned by the character and updating the json apperance config
-    - Able to get achievements from the individual character level
-  - Integration Tests - Party
-    - Able to create party from a chosen boss fight
-    - Able to join via a 6 digit access-code
-    - Able to show new characters who have joined the party
-    - Able to add a ready flag to characters who are ready
-    - Able to transit to Battle Page when everyone in the party is ready
-    - Able to remove characters who have left the party
-  - Integration Tests - Monster
-    - Able to render list of monsters to battle (singleplayer and multiplayer)
-    - Able to render items that the monster drops
-    - Able to render party size required for multiplayer monsters
-    - Able to render duration required for multiplayer monsters
-  - Integration Tests - Battle
-    - Able to create a battle object when fighting a monster
-    - Able to render the boss tagged to the Battle
-    - Able to set the time of the fight based on the bosses' time attribute
-    - Able to end a battle and generate equipment
-    - Able to leave a battle midway and check that battle was not completed
-  - Integration Tests - Chat
-    - Able to receive updates when another user sends a message
-    - Able to see an update when current user sends a message
-    - Able to see messages another user sends when current user is offline
-    - Able to send messages to other user when other user us offline
-  - Integration Tests - Inventory
-    - Able to filter inventory based on chosen weapon type
-    - Able to equip item from inventory and update the character
-    - Able to see new equipments when a battle is complete and an equipment is dropped
-- **Unit Tests**
-  - Unit Tests - User
-    - _authenticate_credentials: Tries to authenticate the given credentials. If authentication is
-      successful, return the user and token. If not, throw an error.
-    - create_user: Tries to create user. If username or email exists, throw an error.
-    - add_friend: Tries to add friend by username. If username does not exist, throw an error.
-  - Unit Tests - Character
-    - equip_equipment: Tries to equip an equipment. If character does not have an equipment, throw error.
-  - Unit Tests - Party
-    - join_party: Tries to join a party with access code. If no party with that access code, throw an error.
-    - poll: Update party with your current ready state, if party is all ready and party size meets boss required party size, highlight that the party is ready.
-  - Unit Tests - Monster
-    - get_drop: Randomly generates a drop item based on its equipment set.
-  - Unit Tests - Battle
-    - set_state_complete: Tries to complete the battle. If the battle is already complete, throw an error.
-- **Usability Testing with friends**
-  - Showed friends the UI mockup to see what features they would like to see and what things need to be changed.
-  - Showed friends the working prototype to see what their feedback on it was, whether there were any weird glitches or any UI that needs to be change. They used the beta account to try our single player battles, party battles, chats and all the other functions. Helped us to spot a few bugs and fix them.
+### Integration Tests
 
-### User Experience
+- Integration Tests - User
+  - Able to login with username and password
+  - Able to create an account with username, password and email
+  - Able to stop users from creating accounts with a username or email that is already in used
+  - Able to stop users from creatings accounts with weak passwords (done on client side)
+- Integration Tests - Character
+  - Shows all characters under the user
+  - Able to create character with a randomly chosen apperance (Not working for WebGL)
+  - Able to equip items that are owned by the character and updating the json apperance config
+  - Able to get achievements from the individual character level
+- Integration Tests - Party
+  - Able to create party from a chosen boss fight
+  - Able to join via a 6 digit access-code
+  - Able to show new characters who have joined the party
+  - Able to add a ready flag to characters who are ready
+  - Able to transit to Battle Page when everyone in the party is ready
+  - Able to remove characters who have left the party
+- Integration Tests - Monster
+  - Able to render list of monsters to battle (singleplayer and multiplayer)
+  - Able to render items that the monster drops
+  - Able to render party size required for multiplayer monsters
+  - Able to render duration required for multiplayer monsters
+- Integration Tests - Battle
+  - Able to create a battle object when fighting a monster
+  - Able to render the boss tagged to the Battle
+  - Able to set the time of the fight based on the bosses' time attribute
+  - Able to end a battle and generate equipment
+  - Able to leave a battle midway and check that battle was not completed
+- Integration Tests - Chat
+  - Able to receive updates when another user sends a message
+  - Able to see an update when current user sends a message
+  - Able to see messages another user sends when current user is offline
+  - Able to send messages to other user when other user us offline
+- Integration Tests - Inventory
+  - Able to filter inventory based on chosen weapon type
+  - Able to equip item from inventory and update the character
+  - Able to see new equipments when a battle is complete and an equipment is dropped
+
+### Unit Tests
+
+- Unit Tests - User
+  - _authenticate_credentials: Tries to authenticate the given credentials. If authentication is
+    successful, return the user and token. If not, throw an error.
+  - create_user: Tries to create user. If username or email exists, throw an error.
+  - add_friend: Tries to add friend by username. If username does not exist, throw an error.
+- Unit Tests - Character
+  - equip_equipment: Tries to equip an equipment. If character does not have an equipment, throw error.
+- Unit Tests - Party
+  - join_party: Tries to join a party with access code. If no party with that access code, throw an error.
+  - poll: Update party with your current ready state, if party is all ready and party size meets boss required party size, highlight that the party is ready.
+- Unit Tests - Monster
+  - get_drop: Randomly generates a drop item based on its equipment set.
+- Unit Tests - Battle
+  - set_state_complete: Tries to complete the battle. If the battle is already complete, throw an error.
+
+### Usability Testing with friends
+
+- Showed friends the UI mockup to see what features they would like to see and what things need to be changed.
+- Showed friends the working prototype to see what their feedback on it was, whether there were any weird glitches or any UI that needs to be change. They used the beta account to try our single player battles, party battles, chats and all the other functions. Helped us to spot a few bugs and fix them.
+
+## **User Experience**
 
 ![all_pages](https://i.imgur.com/mBTr3sx.png)
 
@@ -206,7 +215,7 @@ We had a total of 22 pages by the end of Milestone 3. We took into consideration
 3. Colours
    1. Colours such as dark brown was chosen to bring the player back to the ancient land and additional colour contrast are used to further enhance the meaning of of various aspect of the game. eg. better equipments have golden rings as compare to lower tier equipment drops. Simple colour toggle between green "Ready" button and reddish brown "Unready" button.
 
-### Program Flow
+## **Program Flow**
 
 ![program_flowchart](https://i.imgur.com/K7xJbRl.png)
 
@@ -240,7 +249,7 @@ We hope to build a **multiplayer game** where users can choose to **battle monst
 - As a user, I want to be able to be rewarded when fighting bosses
 - As a user, I want to be able to invite my friends and play with them
 
-## **Features and Timeline**
+## **Timeline**
 
 ### Features:
 
@@ -282,8 +291,6 @@ We hope to build a **multiplayer game** where users can choose to **battle monst
    4. Achievement System
       - Upon completion of different tasks, users will be able to unlock achievements which gives them cosmetic rewards 
 
-2. Landing site
-   - For SEO and attracting users to download the application
 
 ## **Tech Stack** (for now)
 
@@ -292,7 +299,6 @@ We hope to build a **multiplayer game** where users can choose to **battle monst
 3. **React Native**
 4. **Postgresql**
 5. C#
-6. React (Landing site)
 
 ## **Project Log**
 

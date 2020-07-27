@@ -277,13 +277,14 @@ We hope to build a **multiplayer game** where users can choose to **battle monst
 
 ### Features
 
-1. Time-based battle (60mins) where each task is represented in a monster
-2. Multiplayer battle where everyone contributes to fighting a monster. (If one person leaves, everyone dies)
-4. Leaderboard system
-6. Achievement system
-7. Cosmetic drops from killing monsters (Collection based)
-6. Friend system
-7. Equipment system
+1. Time-based battle where each task is represented in a monster
+2. Multiplayer battle where players can team up together in parties to fight monsters
+3. Party system
+4. Chat system
+5. Achievement system
+6. Cosmetic drops from killing monsters (Collection based)
+7. Friend system
+8. Equipment system
 
 ### Timeline
 

@@ -71,7 +71,8 @@ In Milestone 3, we have added the features that we set out to do and implemented
    2. There was an initial feedback that it was too rigid if we set everything as thirty minutes. We contemplated making it adjustable so that users could choose how much time they would want to spend. However, we decided on creating different bosses with different timings instead, so as to provide the flexibility as well as support our boss difficulty systems.
 7. **Party Feature**
    1. Players form parties before fighting multiplayer battles. This helps to promote collaboration and healthy peer support.
-   2. This is acheived through polling the backend for updates and using Redis as a key-value store for faster read and writes (about 10x faster than PostgreSQL)
+   2. During the battle itself, one player's action will not implicate another (e.g. if one person leaves his fight, the other players in the party will still be able to do the task) so as to prevent the app from being disruptive.
+   3. This is acheived through polling the backend for updates and using Redis as a key-value store for faster read and writes (about 10x faster than PostgreSQL)
 
 ## Prototype
 

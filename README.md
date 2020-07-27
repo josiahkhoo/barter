@@ -4,11 +4,35 @@
 
 ![barter-poster](https://i.imgur.com/SFdewwH.png)
 
-[TOC]
+- [Barter](#barter)
+  * [Milestone 3](#milestone-3)
+    + [Features and Deliverables](#features-and-deliverables)
+  * [Prototype](#prototype)
+  * [Architecture and Technologies](#architecture-and-technologies)
+    + [Architecture](#architecture)
+    + [Backend Services](#backend-services)
+    + [Database Schema](#database-schema)
+  * [Tests](#tests)
+    + [Integration Tests](#integration-tests)
+    + [Unit Tests](#unit-tests)
+    + [Usability Testing with friends](#usability-testing-with-friends)
+  * [User Experience](#user-experience)
+  * [Program Flow](#program-flow)
+  * [Proposed Level of Achievement](#proposed-level-of-achievement)
+  * [Motivation](#motivation)
+  * [Aim](#aim)
+  * [User Stories](#user-stories)
+  * [Timeline](#timeline)
+    + [Features](#features)
+    + [Timeline](#timeline)
+        * [Features to be completed by the mid of June](#features-to-be-completed-by-the-mid-of-june)
+        * [Features to be completed by the mid of July](#features-to-be-completed-by-the-mid-of-july)
+        * [Features to be completed by the mid of Aug](#features-to-be-completed-by-the-mid-of-aug)
+  * [Tech Stack](#tech-stack)
+  * [Project Log](#project-log)
 
 
-
-## **Milestone 3**
+## Milestone 3
 
 ![Poster](https://i.imgur.com/UD2H1Ey.jpg)
 
@@ -49,7 +73,7 @@ In Milestone 3, we have added the features that we set out to do and implemented
    1. Players form parties before fighting multiplayer battles. This helps to promote collaboration and healthy peer support.
    2. This is acheived through polling the backend for updates and using Redis as a key-value store for faster read and writes (about 10x faster than PostgreSQL)
 
-## **Prototype**
+## Prototype
 
 [Link To Prototype](https://josiahkhoo.github.io/barter-web/)
 
@@ -78,7 +102,7 @@ chara2: Beta3_two
 
 
 
-## **Architecture and Technologies**
+## Architecture and Technologies
 
 [Link to barter-unity repo](https://github.com/josiahkhoo/barter-unity)
 
@@ -130,7 +154,7 @@ Our backend is futher broken down into multiple services, which is routed during
 
 ![class_diagram](https://i.ibb.co/wMz3SKw/barter-class-diagram-1.png)
 
-## **Tests**
+## Tests
 
 ### Integration Tests
 
@@ -194,7 +218,7 @@ Our backend is futher broken down into multiple services, which is routed during
 - Showed friends the UI mockup to see what features they would like to see and what things need to be changed.
 - Showed friends the working prototype to see what their feedback on it was, whether there were any weird glitches or any UI that needs to be change. They used the beta account to try our single player battles, party battles, chats and all the other functions. Helped us to spot a few bugs and fix them.
 
-## **User Experience**
+## User Experience
 
 ![all_pages](https://i.imgur.com/mBTr3sx.png)
 
@@ -215,7 +239,7 @@ We had a total of 22 pages by the end of Milestone 3. We took into consideration
 3. Colours
    1. Colours such as dark brown was chosen to bring the player back to the ancient land and additional colour contrast are used to further enhance the meaning of of various aspect of the game. eg. better equipments have golden rings as compare to lower tier equipment drops. Simple colour toggle between green "Ready" button and reddish brown "Unready" button.
 
-## **Program Flow**
+## Program Flow
 
 ![program_flowchart](https://i.imgur.com/K7xJbRl.png)
 
@@ -223,17 +247,17 @@ We had a total of 22 pages by the end of Milestone 3. We took into consideration
 
 To view this at a higher resolution and see how everything flows, please view our Figma file above.
 
-## **Proposed Level of Achievement:**
+## Proposed Level of Achievement
 
 Artemis
 
-## **Motivation**
+## Motivation
 
 Students for some reason, have a strong tendency to get themselves addicted to new games right before exams, when they are supposed to be studying (unsubstantiated fact but from real life examples). What if we could create a game for these students to play, and also keep them productive at the same time? Even better, we can introduce network effects when we allow people to team up in game to complete tasks togethers.
 
 We understand that there are applications that gamify productivity such as Forest, where you grow trees when you leave your phone alone, as well as Habitica, a gamified task manager where you collect equipment upon clearing tasks, these apps however lack the sense of immersion that games bring about and does not satisfy the strong urge to game and to be productive at the same time.
 
-## **Aim**
+## Aim
 
 We hope to build a **multiplayer game** where users can choose to **battle monsters alone** or **with friends**.
 
@@ -242,16 +266,16 @@ We hope to build a **multiplayer game** where users can choose to **battle monst
 3. Players are rewarded upon finishing battles
 4. Players can join parties to battle bosses together
 
-## **User Stories**
+## User Stories
 
 - As a user, I want to be able to set **different** timers for my tasks and fight monsters
 - As a user, I want to be able to synchronise my data across devices
 - As a user, I want to be able to be rewarded when fighting bosses
 - As a user, I want to be able to invite my friends and play with them
 
-## **Timeline**
+## Timeline
 
-### Features:
+### Features
 
 1. Time-based battle (60mins) where each task is represented in a monster
 2. Multiplayer battle where everyone contributes to fighting a monster. (If one person leaves, everyone dies)
@@ -261,16 +285,16 @@ We hope to build a **multiplayer game** where users can choose to **battle monst
 6. Friend system
 7. Equipment system
 
-### Timeline:
+### Timeline
 
-##### Features to be completed by the mid of June:
+##### Features to be completed by the mid of June
 
 1. Time-based battle
    - Simple UI where the user is brought into an animated boss battle
 2. Authentication and accounts
    - Users will be able to log into their accounts and data is persisted online
 
-##### Features to be completed by the mid of July:
+##### Features to be completed by the mid of July
 
 1. Drop system
    1. Bosses will randomly drop equipments (will tweak this) (Percentage based drop)
@@ -282,7 +306,7 @@ We hope to build a **multiplayer game** where users can choose to **battle monst
 4. Different timings for bosses
    1. Allows for flexibility in terms of tasks for players.
 
-##### Features to be completed by the mid of Aug:
+##### Features to be completed by the mid of Aug
 
 1. Multiplayer system
 
@@ -292,7 +316,7 @@ We hope to build a **multiplayer game** where users can choose to **battle monst
       - Upon completion of different tasks, users will be able to unlock achievements which gives them cosmetic rewards 
 
 
-## **Tech Stack** (for now)
+## Tech Stack
 
 1. **Unity**
 2. **Django**
@@ -300,7 +324,7 @@ We hope to build a **multiplayer game** where users can choose to **battle monst
 4. **Postgresql**
 5. C#
 
-## **Project Log**
+## Project Log
 
 | S/N  | Task                                                  | Date      | Josiah (hrs) | Yu Ming (hrs) | Remarks                                                      |
 | ---- | ----------------------------------------------------- | --------- | ------------ | :------------ | :----------------------------------------------------------- |

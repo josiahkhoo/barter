@@ -360,16 +360,16 @@ We hope to build a **multiplayer game** where users can choose to **battle monst
 | 30   | Touched up UI                                         | 23/7/2020 | 5            | 5             | Got some feedback from friends, went to do some UI touch ups and making sure its more usable |
 | 31   | Created Party Page in Unity                           | 24/7/2020 | 3            | 3             | Created party page, character list and character prefab.     |
 | 32   | Hooked Party with Party APIs                          | 24/7/2020 | 4            | 4             | Connected the party page with Party APIs and made sure that it polls properly and transits to battle scene properly. |
-| 33   | Created Inventory Page in Unity                       | 25/7/2020 | 3            | 3             | Created inventory page, equipment prefab (which was hard to do for us because an equipment was a sprite and we didn't really have experience with that) |
-| 34   | Hooked Inventory with Equipment APIs                  | 25/7/2020 | 3            | 3             | Hooked inventory page with backend APIs and tested to see if equipments could be equipped and if the character reflected the change. |
-| 35   | Created Rewards Page in Unity                         | 26/7/2020 | 3            | 3             | Created rewards page in and used the equipment prefab.       |
-| 36   | Linked Rewards Page with Battle API                   | 26/7/2020 | 2            | 2             | Linked rewards with the completed battle object to render the won item. |
-| 37   | Added Achievement View and Battle Logs API to backend | 26/7/2020 | 3            | 3             | Added achievement and battle logs APIs to backend that queried the characters battles and generated a summary log. |
-| 38   | Created Achievements Page and Battle Logs Page        | 26/7/2020 | 3            | 3             | Created Achievement Page, Battle Logs Page, Achievement Prefab and Battle Log prefab. Also integrated it with the backend. |
+| 33   | Created Inventory Page in Unity                       | 25/7/2020 | 4            | 4             | Created inventory page, equipment prefab (which was hard to do for us because an equipment was a sprite and we didn't really have experience with that) |
+| 34   | Hooked Inventory with Equipment APIs                  | 25/7/2020 | 4            | 4             | Hooked inventory page with backend APIs and tested to see if equipments could be equipped and if the character reflected the change. |
+| 35   | Created Rewards Page in Unity                         | 26/7/2020 | 4            | 4             | Created rewards page in and used the equipment prefab.       |
+| 36   | Linked Rewards Page with Battle API                   | 26/7/2020 | 3            | 3             | Linked rewards with the completed battle object to render the won item. |
+| 37   | Added Achievement View and Battle Logs API to backend | 26/7/2020 | 4            | 4             | Added achievement and battle logs APIs to backend that queried the characters battles and generated a summary log. |
+| 38   | Created Achievements Page and Battle Logs Page        | 26/7/2020 | 4            | 4             | Created Achievement Page, Battle Logs Page, Achievement Prefab and Battle Log prefab. Also integrated it with the backend. |
 | 39   | Deployment to GitHub pages                            | 27/7/2020 | 4            | 4             | Deployed to Github Pages and fixed all null references so that WebGL could work properly, still has some scaling issues because of the resolution that we built it at. |
 | 40   | Documentation                                         | 27/7/2020 | 5            | 0             | Touched up the documentation for Milestone 3.                |
 | 41   | Video                                                 | 27/7/2020 | 0            | 5             | Created a video to showcase Barter and its features.         |
-|      | Total Hours                                           |           | 134          | 134           |                                                              |
+|      | Total Hours                                           |           | 140          | 140           |                                                              |
 
 
 
